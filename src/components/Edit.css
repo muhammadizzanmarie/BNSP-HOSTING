@@ -1,0 +1,61 @@
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: sans-serif;
+  }
+  
+  form input,
+  form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0051ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #003fd6;
+  }
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .back-button:hover {
+    color: #0056b3;
+  }
+  .proses-container {
+    text-align: center;
+  }
+  
+  .success-icon {
+    font-size: 48px;
+    color: green;
+    margin: 20px 0;
+  }
+  

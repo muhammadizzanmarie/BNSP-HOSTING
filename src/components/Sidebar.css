@@ -1,0 +1,38 @@
+.sidebar {
+    width: 220px;
+    background-color: #1f2937;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar a, .logout-button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover,
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  

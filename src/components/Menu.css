@@ -1,0 +1,118 @@
+/* Layout dasar dashboard */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    width: 220px;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+  }
+  
+  .sidebar ul li a:hover {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f1f5f9;
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .btn-registrasi {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn-registrasi:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .pendaftar-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .pendaftar-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  }
+  
+  .pendaftar-card p {
+    margin: 5px 0;
+  }
+  
+  .action-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .btn-edit {
+    background-color: #16a34a;
+  }
+  
+  .btn-delete {
+    background-color: #dc2626;
+  }
+  .logout-button {
+    background: none;
+    border: none;
+    color: #fff;
+    text-align: left;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .logout-button:hover {
+    color: #f00;
+  }
+  
