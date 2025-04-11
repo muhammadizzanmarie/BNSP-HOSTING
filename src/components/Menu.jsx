@@ -11,7 +11,7 @@ const Menu = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('http://localhost:4200/api/pendaftar');
+      const res = await axios.get('https://izzan.rikpetik.site/api/pendaftar');
       setPendaftar(res.data);
     } catch (err) {
       console.error(err);
@@ -20,7 +20,7 @@ const Menu = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4200/api/pendaftar/${id}`);
+      await axios.delete(`https://izzan.rikpetik.site/api/pendaftar/${id}`);
       fetchData();
     } catch (err) {
       console.error(err);
@@ -28,10 +28,7 @@ const Menu = () => {
   };
 
   const handleLogout = () => {
-
     localStorage.removeItem('token');
-
-
     window.location.href = '/landing';
   };
 
