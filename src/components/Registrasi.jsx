@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './Edit.css'; // CSS tetap pakai yang sama
+import './Edit.css';
 
 const Registrasi = () => {
   const navigate = useNavigate();
@@ -20,17 +20,14 @@ const Registrasi = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Hanya huruf untuk nama
     if (name === 'nm_pendaftar' && /[^A-Za-z\s]/.test(value)) {
       return;
     }
 
-    // Hanya angka untuk no_hp dan nisn
     if ((name === 'no_hp' || name === 'nisn') && /[^0-9]/.test(value)) {
       return;
     }
 
-    // Maksimal 10 digit untuk NISN
     if (name === 'nisn' && value.length > 10) {
       return;
     }
@@ -41,14 +38,13 @@ const Registrasi = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validasi panjang NISN harus tepat 10 digit
     if (formData.nisn.length !== 10) {
       alert("NISN harus tepat 10 digit!");
       return;
     }
 
     try {
-      await axios.post('http://localhost:4200/api/pendaftar', formData);
+      await axios.post('https://izzan.rikpetik.site/api/pendaftar', formData);
       navigate('/proses');
     } catch (err) {
       console.error('Gagal tambah data:', err);

@@ -20,11 +20,7 @@ const Edit = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get(`http://localhost:4200/api/pendaftar/${id}`);
-      console.log("DATA DARI SERVER:", res.data);
-      
-      // Jika responsenya ada data wrapper:
-      // setFormData(res.data.data);
+      const res = await axios.get(`https://izzan.rikpetik.site/api/pendaftar/${id}`);
       setFormData(res.data);
     } catch (err) {
       console.error('Gagal ambil data:', err);
@@ -38,12 +34,10 @@ const Edit = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Validasi nama hanya huruf
     if (name === 'nm_pendaftar' && /[^A-Za-z\s]/.test(value)) {
       return;
     }
 
-    // Validasi no_hp & nisn hanya angka
     if ((name === 'no_hp' || name === 'nisn') && /[^0-9]/.test(value)) {
       return;
     }
@@ -54,14 +48,13 @@ const Edit = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validasi NISN harus 10 digit
     if (!/^\d{10}$/.test(formData.nisn)) {
       alert('NISN harus terdiri dari 10 digit angka');
       return;
     }
 
     try {
-      await axios.put(`http://localhost:4200/api/pendaftar/${id}`, formData);
+      await axios.put(`https://izzan.rikpetik.site/api/pendaftar/${id}`, formData);
       navigate('/');
     } catch (err) {
       console.error('Gagal update data:', err);
