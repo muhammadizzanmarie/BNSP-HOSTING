@@ -2,14 +2,12 @@ import React from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'IPA', value: 30 },
-  { name: 'IPS', value: 20 },
-  { name: 'TKJ', value: 15 },
-  { name: 'RPL', value: 25 },
-  { name: 'Multimedia', value: 10 }
+  { name: 'PPW', value: 30 },
+  { name: 'PPL', value: 20 },
+  { name: 'PSJ', value: 15 },
 ];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#845EC2'];
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 
 const Grafik = () => {
   return (
